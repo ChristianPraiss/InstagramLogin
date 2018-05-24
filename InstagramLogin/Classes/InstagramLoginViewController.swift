@@ -93,10 +93,10 @@ open class InstagramLoginViewController: UIViewController {
         view.addSubview(webView)
 
         webView.translatesAutoresizingMaskIntoConstraints = false
-        webView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
-        webView.heightAnchor.constraint(equalTo: view.heightAnchor).isActive = true
-        webView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        webView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        webView.topAnchor.constraint(equalTo: self.topLayoutGuide.bottomAnchor).isActive = true
+        webView.bottomAnchor.constraint(equalTo: self.bottomLayoutGuide.topAnchor).isActive = true
+        webView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        webView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
 
         if progressView != nil {
             webViewObservation = webView.observe(\.estimatedProgress, changeHandler: progressViewChangeHandler)
