@@ -83,7 +83,7 @@ open class InstagramLoginViewController: UIViewController {
 
     private func setupWebView() {
         let webConfiguration = WKWebViewConfiguration()
-        webConfiguration.websiteDataStore = .nonPersistent()
+        webConfiguration.websiteDataStore = WKWebsiteDataStore.default()
 
         webView = WKWebView(frame: .zero, configuration: webConfiguration)
         webView.isOpaque = false
